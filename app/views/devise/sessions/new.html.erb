@@ -1,0 +1,23 @@
+<div class="flex items-center justify-center min-h-screen">
+  <div class="card bg-base-200 w-96 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title">Log in</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input input-bordered w-full max-w-xs mb-2"  %>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input input-bordered w-full max-w-xs mb-2" %>
+
+        <% if devise_mapping.rememberable? %>
+            <label class="cursor-pointer justify-center">
+              <%= f.check_box :remember_me, class: "checkbox checkbox-accent bg-neutral"%>
+              <%= f.label :remember_me, class: "label-text"%>
+            </label>
+        <% end %>
+        <div class="mt-2 w-full">
+          <%= f.submit "Log in", class: "btn btn-primary w-full" %>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
