@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
   <head>
     <title>Chef</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,11 +9,19 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag  "turbo" ,type: "module" %>
   </head>
-
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <div class="bg-state-200 sticky top-0 p-2">
+      <%= render "shared/header" %>
+    </div>
+    <div class="flex">
+      <div class="w-1/6 sticky h-[calc(100vh-64px)] px-2" style="top: 4rem">
+        <%= render "shared/navigation" %>
+      </div>
+      <div class="w-5/6 px-2 min-h-16">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
