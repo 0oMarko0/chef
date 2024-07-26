@@ -1,0 +1,23 @@
+<div class="hero min-h-content">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Hello there</h1>
+      <p class="py-6">
+        Here's some interesting link to test your application
+      </p>
+      <% if user_signed_in? %>
+        <ul class="menu bg-base-200 rounded-box">
+          <li><%= link_to "Profile", edit_user_registration_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}%></li>
+          <li><%= link_to "Forgot password", new_user_password_path %></li>
+          <li><%= link_to "Forgot password", edit_user_password_path %></li>
+        </ul>
+      <% else %>
+        <ul class="menu bg-base-200 rounded-box">
+          <li><%= link_to "Sign in", new_user_registration_path %></li>
+          <li><%= link_to "Login", new_user_session_path %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

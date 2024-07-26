@@ -1,0 +1,40 @@
+
+<div class="flex items-center justify-center min-h-content">
+  <div class="card bg-base-200 w-96 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title">Edit <%= resource_name.to_s.humanize %></h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input input-bordered w-full max-w-xs mb-2" %>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">leave blank if you don't want to change it</span>
+          </div>
+          <%= f.password_field :password, autocomplete: "new-password", placeholder: "New password", class: "input input-bordered w-full max-w-xs mb-2"%>
+        </label>
+
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "input input-bordered w-full max-w-xs mb-2" %>
+
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">we need your current password to confirm your changes</span>
+          </div>
+          <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "Current password", class: "input input-bordered w-full max-w-xs mb-2" %>
+        </label>
+
+        <div class="mt-2 w-full">
+          <%= f.submit "Update", class: "btn btn-primary w-full"%>
+        </div>
+      <% end %>
+
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete , class: "link link-primary"%>
+      <%= link_to "Back", :back , class: "link link-primary"%>
+    </div>
+  </div>
+</div>
