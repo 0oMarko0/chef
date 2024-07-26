@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html data-theme="dark">
-  <head>
-    <title>Chef</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+<head>
+  <title>Chef</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= javascript_include_tag  "turbo" ,type: "module" %>
-  </head>
-  <body>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= javascript_include_tag "turbo", type: "module" %>
+</head>
+<body>
+  <% if user_signed_in? %>
     <div class="bg-state-200 sticky top-0 p-2">
       <%= render "shared/header" %>
     </div>
     <div class="flex">
-      <div class="w-1/6 sticky h-[calc(100vh-64px)] px-2" style="top: 4rem">
+      <div id="nav-container" class="w-1/6 sticky h-[calc(100vh-64px)] px-2 transform transition duration-500" style="top: 4rem">
         <%= render "shared/navigation" %>
       </div>
-      <div class="w-5/6 px-2 min-h-16">
+      <div id="main-container" class="w-5/6 px-2 min-h-16 transform transition duration-500">
         <%= yield %>
       </div>
     </div>
-  </body>
+  <% else %>
+    <!-- if the user isn't authenticated, we assume we are in the auth process-->
+    <%= yield %>
+  <% end %>
+</body>
 </html>

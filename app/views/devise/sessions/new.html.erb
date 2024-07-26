@@ -3,8 +3,8 @@
     <div class="card-body">
       <h2 class="card-title">Log in</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input input-bordered w-full max-w-xs mb-2"  %>
-          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input input-bordered w-full max-w-xs mb-2" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input input-bordered w-full max-w-xs mb-3"  %>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input input-bordered w-full max-w-xs mb-3" %>
 
         <% if devise_mapping.rememberable? %>
             <label class="cursor-pointer justify-center">
