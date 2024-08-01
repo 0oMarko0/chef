@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Deploy to heroku
+```
+git push heroku main
+```
