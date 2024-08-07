@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "daisyui": "^4.12.10"
+  },
+  "engines": {
+    "node": "20.9.0",
+    "yarn": "1.22.19"
   }
 }
