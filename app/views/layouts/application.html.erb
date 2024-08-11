@@ -12,6 +12,14 @@
 </head>
 <body data-controller="navigation">
   <% if user_signed_in? %>
+  <div class="block md:hidden">
+    <!-- Content for mobile -->
+    <%= yield %>
+    <%= render "shared/mobile-menu" %>
+  </div>
+
+  <div class="hidden md:block">
+    <!-- Content for desktop -->
     <div class="bg-state-200 sticky top-0 p-2">
       <%= render "shared/header" %>
     </div>
@@ -23,6 +31,7 @@
         <%= yield %>
       </div>
     </div>
+  </div>
   <% else %>
     <!-- if the user isn't authenticated, we assume we are in the auth process-->
     <%= yield %>
