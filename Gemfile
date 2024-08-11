@@ -66,6 +66,10 @@ group :development do
   gem 'rubocop-rspec', require: false
   gem 'rubocop-rspec_rails', require: false
 
+  # Security analysis CLI tools
+  gem 'brakeman', '~> 6.0', require: false
+  gem 'bundler-audit', '~> 0.9', require: false
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
