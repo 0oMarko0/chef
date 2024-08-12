@@ -31,7 +31,9 @@ gem 'cssbundling-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Action before commit, like running rubocop
 gem 'overcommit'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -71,11 +73,9 @@ group :development do
   gem 'brakeman', '~> 6.0', require: false
   gem 'bundler-audit', '~> 0.9', require: false
 
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  # Preview mail in the browser
+  gem 'letter_opener', '~> 1.8'
+  gem 'letter_opener_web', '~> 3.0'
 end
 
 group :test do
