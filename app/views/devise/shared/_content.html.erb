@@ -1,0 +1,14 @@
+<div class="flex items-center justify-center min-h-screen">
+  <div class="card md:bg-base-200 w-96 md:shadow-xl">
+    <div class="card-body">
+      <% if local_assigns[:title].present? %>
+        <h2 class="card-title"><%= local_assigns[:title] %></h2>
+      <% end %>
+      <%= yield %>
+
+      <% unless local_assigns[:links] == false %>
+        <%= render "devise/shared/links" %>
+      <% end %>
+    </div>
+  </div>
+</div>

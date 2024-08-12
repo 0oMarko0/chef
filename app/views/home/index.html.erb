@@ -12,11 +12,6 @@
           <li><%= link_to "Forgot password", new_user_password_path %></li>
           <li><%= link_to "Forgot password", edit_user_password_path %></li>
         </ul>
-      <% else %>
-        <ul class="menu bg-base-200 rounded-box">
-          <li><%= link_to "Sign in", new_user_registration_path %></li>
-          <li><%= link_to "Login", new_user_session_path %></li>
-        </ul>
       <% end %>
     </div>
   </div>
