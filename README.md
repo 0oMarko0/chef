@@ -27,3 +27,9 @@ Things you may want to cover:
 ```
 git push heroku main
 ```
+
+
+test database doesnt have any password
+
+http://localhost:3000/rails/mailers
+http://localhost:3000/letter_opener
