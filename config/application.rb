@@ -26,6 +26,6 @@ module Chef
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    config.to_prepare { Devise::Mailer.layout "mailer" }
+    config.to_prepare { Devise::Mailer.layout 'mailer' }
   end
 end
