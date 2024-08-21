@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import NavigationController from "./navigation_controller"
 application.register("navigation", NavigationController)
+
+import ThemeController from "./theme_controller"
+application.register("theme", ThemeController)

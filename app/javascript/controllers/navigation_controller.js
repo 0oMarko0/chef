@@ -26,4 +26,12 @@ export default class extends Controller {
       }, 300)
     }
   }
+
+  theme(event) {
+    const theme = event.target.innerText.trim() // or event.target.textContent.trim()
+    console.log(`Theme selected: ${theme}`)
+    let htmlElement = document.documentElement;
+// Change the data-theme attribute to "light"
+    htmlElement.setAttribute("data-theme", theme);
+  }
 }
