@@ -33,3 +33,19 @@ test database doesnt have any password
 
 http://localhost:3000/rails/mailers
 http://localhost:3000/letter_opener
+
+
+
+Need to run
+```
+bun install
+```
+
+```
+bun run build
+```
+
+```
+bun run build:css
+
+```
