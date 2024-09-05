@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 namespace :recipes do
   desc 'Seed recipes'
   task seed: :environment do
