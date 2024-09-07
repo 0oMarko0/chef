@@ -5,5 +5,8 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
-  def new; end
+  def new
+    recipe = Recipe.new(title: params[:title], description: params[:description])
+    recipe.save
+  end
 end
