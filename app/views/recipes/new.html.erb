@@ -1,5 +1,5 @@
 <div class="flex justify-center items-center min-h-screen">
-  <%= form_with do |f| %>
+  <%= form_with model: @recipe do |f| %>
     <div class="field">
       <%= f.text_field :title, autofocus: true, autocomplete: "title", placeholder: "Title", class: "input input-bordered w-full max-w-xs mb-3" %>
     </div>
