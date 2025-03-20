@@ -18,10 +18,10 @@ module.exports = {
     },
   },
   plugins: [
-    require("daisyui"),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
+    require("daisyui"),
   ],
   daisyui: {
     themes: ["light", "dark", "cupcake"],

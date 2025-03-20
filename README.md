@@ -1,51 +1,34 @@
-# README
+# Chef
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Chef is a simple toy project for learning and experimenting with Ruby on Rails. The end goal is to build an application for managing recipes.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Some parts of the application use JavaScript, specifically [daisyUI](https://daisyui.com/) as the component library, which needs to be built first.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+You'll need to install [Bun](https://bun.sh/docs/installation) by following the official installation guide for your platform.
 
-* Database creation
+### Setup
 
-* Database initialization
+Once Bun is installed, run the following commands to set up the frontend assets:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-## Deploy to heroku
-```
-git push heroku main
-```
-
-
-test database doesnt have any password
-
-http://localhost:3000/rails/mailers
-http://localhost:3000/letter_opener
-
-
-
-Need to run
-```
+```bash
 bun install
-```
-
-```
 bun run build
-```
-
-```
 bun run build:css
-
 ```
+
+Then, start the Rails server:
+
+```bash
+bin/rails server
+```
+
+## Useful Links
+
+The project uses [letter_opener](https://github.com/ryanb/letter_opener) to intercept emails in the development environment. You can access the intercepted emails at:
+
+- [http://localhost:3000/rails/mailers](http://localhost:3000/rails/mailers)
+- [http://localhost:3000/letter_opener](http://localhost:3000/letter_opener)

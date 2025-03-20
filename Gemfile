@@ -76,6 +76,8 @@ group :development do
   # Preview mail in the browser
   gem 'letter_opener', '~> 1.8'
   gem 'letter_opener_web', '~> 3.0'
+
+  gem 'faker', '~> 3.4'
 end
 
 group :test do
